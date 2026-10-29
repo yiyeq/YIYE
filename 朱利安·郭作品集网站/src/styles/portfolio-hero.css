@@ -1,0 +1,71 @@
+/* All composition coordinates are relative to the banner, independently editable. */
+.portfolio-banner {
+  --character-width:100%;--character-bottom:0%;
+  --title-width:92%;--title-left:6.8%;--title-top:8.1%;
+  --profile-left:13.4%;--profile-top:45.2%;--profile-width:19%;--profile-angle:7deg;
+  --project-right:10.5%;--project-top:44.2%;--project-width:13.5%;--project-angle:13deg;
+  --glass-bg:rgba(10,18,39,.68);--glass-blur:14px;--glass-border:rgba(164,190,255,.48);
+  --pointer-x:0;--pointer-y:0;
+  position:relative;isolation:isolate;overflow:hidden;width:100%;aspect-ratio:1672/941;background:#020305;color:#f4f6fc;
+}
+.portfolio-banner img{display:block;width:100%;height:auto;max-width:none}
+.banner-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.banner-depth{--depth:3px;translate:calc(var(--pointer-x)*var(--depth)) calc(var(--pointer-y)*var(--depth));transition:translate .45s ease-out}
+.banner-background{position:absolute;inset:-2px;z-index:0;--depth:1px;animation:banner-appear .7s both}
+.banner-background img{object-fit:cover;height:100%}
+.banner-title{position:absolute;left:var(--title-left);top:var(--title-top);width:var(--title-width);z-index:1;--depth:3px;animation:banner-appear .8s .1s both;line-height:0}
+.banner-figure{position:absolute;left:50%;bottom:var(--character-bottom);width:var(--character-width);z-index:3;transform:translateX(-50%);translate:calc(var(--pointer-x)*4px) 0;transition:translate .45s ease-out;pointer-events:none;animation:banner-appear .9s .15s both}
+.banner-character{position:relative;width:100%;z-index:2}
+.banner-signature{position:absolute;z-index:4;top:8%;left:3%;font:italic 700 clamp(70px,9.1vw,180px)/1 'Segoe Script','Brush Script MT',cursive;letter-spacing:-.09em;color:#075BFF;transform:rotate(-13deg)}
+.banner-disciplines{position:absolute;top:10.8%;left:26.8%;z-index:2;border-left:1px solid #7d899c66;padding-left:15px;font-size:clamp(9px,.78vw,16px);letter-spacing:.22em;line-height:1.5}
+.banner-edition{position:absolute;right:3%;top:12%;z-index:2;display:flex;align-items:center;gap:clamp(12px,1.5vw,28px);font-size:clamp(10px,1.1vw,21px);letter-spacing:.15em}
+.banner-edition>span:first-child{font-size:2.4vw;color:#075BFF}.banner-edition>span:nth-child(2){font-size:2.1vw;font-weight:200;font-style:italic;letter-spacing:-.03em}.banner-edition i{height:18px;border-left:1px solid #aeb8cf}
+.banner-manifesto{position:absolute;left:4%;top:48.5%;z-index:5;font:italic clamp(12px,1.2vw,23px)/1.2 'Segoe Print',Georgia,serif}.banner-manifesto>span{display:block;width:60px;border-top:1px solid #d8dded;margin-top:16px}
+.banner-flame{position:absolute;width:26%;left:8%;top:59%;fill:#075BFF;z-index:2;transform:rotate(-13deg)}
+.banner-profile-position{position:absolute;left:var(--profile-left);top:var(--profile-top);width:var(--profile-width);z-index:6;--depth:7px;animation:banner-enter .8s .35s both}
+.banner-glass{display:block;position:relative;border:1px solid var(--glass-border);background:linear-gradient(135deg,#ffffff0e,transparent 45%,#1457ef26),var(--glass-bg);backdrop-filter:blur(var(--glass-blur));-webkit-backdrop-filter:blur(var(--glass-blur));box-shadow:inset 0 1px 0 #ffffff28,inset 0 -1px 8px #2b62ff30,0 14px 35px #0006;border-radius:12px;transition:transform .3s,border-color .3s,box-shadow .3s}
+.banner-glass:hover{border-color:#c5d8ffcc;box-shadow:inset 0 1px #ffffff40,0 17px 35px #0008}
+.profile-glass{aspect-ratio:2/1;transform:rotate(var(--profile-angle));display:flex;gap:7%;padding:5%;font-family:Arial,sans-serif}
+.profile-glass:hover{transform:rotate(var(--profile-angle)) translateY(-4px)}
+.profile-photo{position:relative;flex:0 0 36%;height:100%;overflow:hidden;border-radius:5px;background:linear-gradient(140deg,#131b2b,#7584a0);border:1px solid #d0dfff66}
+.profile-photo img{object-fit:cover;object-position:56% 5%;width:310%!important;height:175%!important;max-width:none;left:-105%!important;top:-4%!important}
+.profile-barcode{position:absolute;bottom:3%;left:8%;right:8%;height:9%;background:repeating-linear-gradient(90deg,#e5eafa 0px 1px,transparent 1px 3px,#e5eafa 3px 5px,transparent 5px 6px);opacity:.8}
+.profile-info{display:flex;flex-direction:column;min-width:0;padding-top:2%;flex:1}.profile-info strong{font-size:clamp(13px,1.16vw,23px);font-weight:500;line-height:1.2}.profile-role{font-size:clamp(10px,.83vw,16px);margin-top:3%;white-space:nowrap}.profile-divider{width:100%;border-top:1px solid #c2d1fc44;margin:9% 0 7%}.profile-info small{font-size:clamp(8px,.67vw,13px);line-height:1.55;color:#c1c8df;white-space:nowrap}
+.banner-arrow{position:absolute;right:5%;top:24%;width:9%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;color:#121c39;background:#b5bddb}.banner-arrow svg{width:65%;transition:translate .3s}.profile-glass:hover .banner-arrow svg{translate:2px 0}.profile-year{position:absolute;right:5%;bottom:6%;font-size:clamp(7px,.62vw,12px);color:#c0c9e4}
+.banner-project-position{position:absolute;right:var(--project-right);top:var(--project-top);width:var(--project-width);z-index:7;--depth:8px;animation:banner-enter .8s .42s both}
+.project-glass{aspect-ratio:1.1;overflow:hidden;transform:rotate(var(--project-angle));background:linear-gradient(150deg,#225adb88,#070d1cbb);border-radius:10px}
+.project-glass:hover{transform:rotate(var(--project-angle)) translateY(-4px)}
+.banner-concept-art{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 12%,#92b6ff99,transparent 60%),linear-gradient(145deg,#152646,#020611)}
+.concept-ring{position:absolute;width:80%;aspect-ratio:1;left:-5%;top:9%;border:clamp(7px,1.1vw,22px) solid #658de6;border-radius:50%;transform:rotateX(60deg) rotateY(-18deg) rotate(-25deg);box-shadow:inset 0 2px 3px #dfeaff,0 10px 20px #000b}
+.concept-sphere{position:absolute;left:26%;top:18%;width:40%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 28% 25%,#e1eaff,#789bd9 20%,#233b70 58%,#080d1a 80%);box-shadow:10px 18px 30px #0008}
+.concept-grid{position:absolute;inset:55% -15% -20%;transform:perspective(120px) rotateX(50deg);background:repeating-linear-gradient(90deg,#729fff33 0 1px,transparent 1px 25px),repeating-linear-gradient(0deg,#729fff33 0 1px,transparent 1px 25px)}
+.project-plus{position:absolute;right:7%;top:7%;border:1px solid #e8eeff66;width:14%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center}.project-card-label{position:absolute;right:8%;bottom:12%;text-align:right;font-size:clamp(8px,.7vw,14px);letter-spacing:.22em;line-height:1.5;text-shadow:0 1px 6px #000}.project-concept-label{position:absolute;left:6%;bottom:4%;font:clamp(5px,.38vw,8px) var(--mono);letter-spacing:.15em;color:#c2cee8}
+.banner-secondary-position{position:absolute;right:2.4%;top:55.5%;width:14%;z-index:5;--depth:5px;animation:banner-enter .8s .48s both}.project-glass-secondary{--project-angle:12deg;aspect-ratio:1.55;filter:saturate(.2);opacity:.75}.project-glass-secondary .concept-sphere{left:7%;top:12%;width:43%}.project-glass-secondary .project-card-label{font-size:clamp(6px,.55vw,11px)}
+.banner-star{position:absolute;left:32%;top:36%;width:7%;z-index:7;--depth:9px;pointer-events:none;animation:banner-enter .8s .4s both}
+.banner-star img{rotate:30deg}
+.banner-robot{position:absolute;left:69%;top:44%;width:12%;z-index:1;transform:rotate(12deg);pointer-events:none;animation:banner-appear .8s .4s both}
+.banner-right-note{position:absolute;right:2.7%;top:43%;z-index:8;font-size:clamp(8px,.76vw,15px);line-height:1.55;letter-spacing:.22em}
+.banner-bottom-left{position:absolute;left:3.2%;bottom:6.7%;z-index:8}.banner-orbits{font-size:22px;font-weight:200;letter-spacing:-12px;padding-right:12px;color:#ccd6f3}.banner-bottom-left p{border-left:1px solid #b1bbcf;padding-left:12px;margin-top:20px;font-size:clamp(7px,.6vw,12px);line-height:1.65;letter-spacing:.2em}
+.banner-explore{position:absolute;right:3%;bottom:6.5%;z-index:8;display:flex;gap:20px;align-items:center;font-size:clamp(7px,.6vw,12px);letter-spacing:.2em;line-height:1.7}.banner-explore>span:nth-child(2){border-left:1px solid #aab2c8;padding-left:12px}.banner-explore svg{transition:translate .3s}.banner-explore:hover svg{translate:3px 0}
+.banner-navigation{position:absolute;inset:0 0 auto;z-index:30;height:clamp(65px,5.2vw,100px);display:flex;align-items:center;gap:3.5vw;padding:0 3%;font-size:12px;letter-spacing:.17em;color:#f5f6fc}
+.banner-explore-words>span{display:block}
+.banner-brand{display:flex;align-items:center;gap:2.4vw;font-weight:600}.banner-brand>span{font-size:40px;font-weight:300}.banner-navlinks{display:flex;gap:4vw;text-transform:uppercase}.banner-navlinks a{padding:12px 0;transition:color .2s}.banner-navlinks a:hover{color:#7fa5ff}.banner-navright{margin-left:auto;display:flex;align-items:center;gap:1.5vw}.banner-navright .language-switch{font-size:10px}.banner-navright .language-switch button[aria-pressed=true]{color:#c3d6ff}.banner-navyear{font-size:clamp(20px,1.9vw,36px);font-weight:200;font-style:italic;letter-spacing:-.03em;border-left:1px solid #a8b4ce66;padding-left:1.6vw}.banner-navline{width:28px;border-top:1px solid #c2cbdf}.banner-menu-toggle{display:none}
+@supports not (backdrop-filter:blur(1px)){.banner-glass{background-color:#101a31ed}}
+@keyframes banner-appear{from{opacity:0}to{opacity:1}}
+@keyframes banner-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+@media(min-width:701px) and (max-width:1100px){.portfolio-banner{aspect-ratio:1.55;min-height:560px;--character-width:110%;--profile-left:8%;--profile-top:52%;--profile-width:25%;--project-width:17%;--project-right:6%;--project-top:49%}.banner-disciplines{left:29%;top:14%}.banner-signature{top:12%}.banner-edition{top:16%}.banner-manifesto{top:39%}.banner-right-note{display:none}.banner-robot{left:69%;top:44%;width:12%}.banner-secondary-position{top:68%;width:16%;right:1%}.banner-star{left:32%;top:43%;width:9%}.banner-navlinks{gap:3vw}.banner-navright{gap:12px}.banner-navline{display:none}.banner-bottom-left{bottom:4%}.banner-explore{bottom:4%}}
+@media(max-width:700px){
+  .portfolio-banner{aspect-ratio:auto;height:844px;height:clamp(680px,calc(100svh - 80px),820px);--title-width:96%;--title-left:2%;--title-top:15%;--character-width:max(200%,850px);--character-bottom:0%;--profile-width:73%;--profile-left:7%;--profile-top:auto;--profile-angle:-4deg}
+  .banner-navigation{height:72px;padding:0 6%;gap:15px;font-size:11px}.banner-brand{gap:12px}.banner-brand>span{font-size:32px}.banner-navright{gap:8px}.banner-navright>svg,.banner-navline,.banner-navyear{display:none}.banner-menu-toggle{display:block;order:3;background:none;border:1px solid #9bb6ed66;border-radius:30px;padding:9px 10px;font-size:9px;letter-spacing:.08em}.banner-navlinks{display:none;position:absolute;top:64px;left:5%;right:5%;padding:20px;background:#071123f5;border:1px solid #688acd66;border-radius:12px;gap:22px;justify-content:center}.banner-navlinks.is-open{display:flex}.banner-navright{margin-left:auto}
+  .banner-signature{top:10%;left:7%;font-size:80px}.banner-disciplines{left:auto;right:7%;top:11.3%;font-size:8px;letter-spacing:.12em;padding-left:10px}.banner-edition{top:25%;right:7%;font-size:8px;gap:10px}.banner-edition>span:first-child{font-size:20px}.banner-edition>span:nth-child(2){font-size:20px}.banner-edition i{height:12px}
+  .banner-manifesto{top:34%;left:7%;font-size:12px}.banner-manifesto>span{width:32px}.banner-profile-position{bottom:7%;z-index:9;max-width:340px}.profile-glass{padding:5%;border-radius:10px}.profile-info strong{font-size:19px}.profile-role{font-size:12px}.profile-info small{font-size:10px}.profile-year{font-size:9px}.profile-photo img{object-position:56% 5%}
+  .banner-project-position,.banner-secondary-position,.banner-right-note,.banner-bottom-left,.banner-star{display:none}.banner-robot{left:64%;right:auto;top:44%;bottom:auto;width:12%;z-index:1}.banner-flame{left:0;top:52%;width:50%}.banner-explore{bottom:2%;right:7%;font-size:8px;gap:12px}.banner-explore>span:nth-child(2){border:0;padding:0;white-space:nowrap}.banner-explore>span:nth-child(2) br{display:none}.banner-explore .banner-orbits{font-size:16px;letter-spacing:-8px}
+}
+@media(max-width:350px){.portfolio-banner{--character-width:850px}.profile-info strong{font-size:16px}.profile-role{font-size:10px}.profile-info small{font-size:8px}.banner-disciplines{font-size:7px;right:5%}.banner-navlinks{gap:18px;font-size:10px}}
+@media(min-width:701px) and (max-width:1100px){.banner-disciplines{left:27%;font-size:7px;letter-spacing:.15em;padding-left:8px}.banner-secondary-position{display:none}}
+@media(max-width:700px){.banner-explore-words{display:flex;gap:6px}.banner-explore-words>span{display:inline}.banner-explore-words>span+span:before{content:'/';margin-right:6px;color:#829bc9}}
+@media(prefers-reduced-motion:reduce){.portfolio-banner *{animation:none!important;transition:none!important}.banner-depth,.banner-figure{translate:none!important}}
+
+
+
+

@@ -1,0 +1,37 @@
+/* Diffused light sits beneath a frosted layer; foreground stays crisp. */
+.contact-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #060c1b;
+}
+.contact-cta::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  inset: -64px;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 16% 82%, #075bff65 0%, #075bff22 26%, transparent 56%),
+    radial-gradient(ellipse at 85% 24%, #b7d4ff3d 0%, #557bdb1a 24%, transparent 52%),
+    radial-gradient(ellipse at 60% 105%, #215dff40 0%, transparent 58%);
+  filter: blur(48px);
+}
+.contact-cta::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, #ffffff06, #08080875 48%, #ffffff05);
+  backdrop-filter: blur(32px) saturate(.8);
+  -webkit-backdrop-filter: blur(32px) saturate(.8);
+  box-shadow: inset 0 1px #ffffff12, inset 0 -1px #ffffff0a;
+}
+.contact-cta > .eyebrow,
+.contact-cta > .micro { color: #b8c9e7; }
+@media (max-width: 700px) {
+  .contact-cta::before { inset: -32px; filter: blur(32px); }
+  .contact-cta::after { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+}
+

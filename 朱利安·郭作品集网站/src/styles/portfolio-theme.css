@@ -1,0 +1,89 @@
+/* Site-wide art direction: original banner, electric blue, silver, and dark glass. */
+body {background-color:var(--bg)}
+body ::selection {background:var(--accent);color:#fff}
+body .skip {background:var(--accent);color:#fff}
+body .nav {border-color:#a3c4ff26}
+body .navlinks a {color:#a7b5ce}
+body .navlinks a:hover,body .navlinks a[aria-current] {color:#f5f8ff}
+body .navlinks a[aria-current]:before {color:var(--accent)}
+body .availability {color:#a7b5ce}
+body .availability i {box-shadow:0 0 12px #075bff80}
+body .language-switch button {color:#9eacc6}
+body .language-switch button[aria-pressed=true] {color:var(--accent-light)}
+body .pill {border-color:#91b0e34d;background:linear-gradient(140deg,#b5d1ff0d,#075bff0b);box-shadow:inset 0 1px #e5edff12}
+body .pill:hover {background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 8px 28px #075bff25}
+body .pill.lime {background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:inset 0 1px #ffffff38,0 8px 28px #075bff30}
+body .pill.lime:hover {background:#246fff;border-color:#79a6ff}
+body .ticker {background:linear-gradient(90deg,#050a14,#0b1730 50%,#050a14);border-color:#8bb3ff30;font-family:var(--sans);font-size:18px;letter-spacing:1px}
+body .ticker i {color:var(--accent-light)}
+body .eyebrow {color:#a8bfe4;letter-spacing:.14em}
+body .micro {color:#a2b2cf}
+body .sectionhead h2,body .about-preview h2 {font-weight:600;letter-spacing:-.045em}
+body .sectionhead .eyebrow {display:flex;align-items:center;gap:12px}
+body .sectionhead .eyebrow:before {content:'';width:20px;height:2px;background:var(--accent);box-shadow:0 0 14px #075bff55}
+body .selected.section {position:relative;background:radial-gradient(ellipse at 100% 0,#075bff12,transparent 48%)}
+body .small-note {color:#afbdd5}
+body .small-note small {color:#899bb9}
+body .filters button {border-color:#8bb3ff35;background:#0c172780;color:#b8c8e3}
+body .filters button:hover {border-color:#8bb3ff99;color:#fff}
+body .filters button[aria-pressed=true] {background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 4px 22px #075bff26}
+body .project-art {border:1px solid #a5c7ff30;border-radius:14px;box-shadow:inset 0 1px #d8e7ff18,0 18px 45px #0003}
+body .project:hover .project-art {border-color:#7fa9ff8c;box-shadow:0 18px 45px #075bff16}
+body .project-meta {padding:2px 2px 18px;border-bottom:1px solid #8bb3ff26}
+body .project-meta h3 {font-weight:500;letter-spacing:.015em}
+body .project-meta h3 span {color:var(--accent-light)}
+body .project-meta p {color:#a5b4ce;line-height:1.6}
+/* Offset the right column visually without adding that offset to every grid row. */
+body .work-grid {row-gap:36px;padding-bottom:60px}
+body .work-grid>.project:nth-child(even) {margin-top:0;transform:translateY(60px)}
+/* Each concept retains its own composition within the shared cool palette. */
+body .forma {background:linear-gradient(135deg,#d3dfef,#8495b3);color:#101c32}
+body .architecture>div {background:linear-gradient(90deg,#263954,#a1b4d3 48%,#e6efff);box-shadow:30px 20px 45px #071b3c66}
+body .offscript {background:linear-gradient(135deg,#075BFF,#0641bd);color:#f3f7ff}
+body .offscript .script-star {color:#b6d2ff}
+body .echo {background:linear-gradient(145deg,#bac9e3,#536e9c)}
+body .echo .phone {background:#061025;border-color:#50698e;box-shadow:25px 35px 35px #07132e66}
+body .echo .album {background:repeating-radial-gradient(ellipse at 70% 40%,#80aaff,#d7e7ff 5px,#0b204e 8px,#075bff 12px)}
+body .echo .player {color:#a3c6ff}
+body .echo-word {color:#dce9ff}
+body .matter {background:radial-gradient(ellipse at 75% 15%,#153a7c,#080e20 70%);color:#e8f0ff}
+body .matter .chrome-orb {background:radial-gradient(ellipse at 30% 24%,#fff 0%,#a5b9d9 12%,#102546 21%,#a4c5fb 31%,#f2f7ff 36%,#42608e 44%,#050c1a 54%,#668bc3 72%,#e4efff 78%,#11274c 89%)}
+body .philosophy.section {position:relative;background:radial-gradient(ellipse at 95% 90%,#075bff20,transparent 60%),linear-gradient(140deg,#080e1b,#03060d);border-color:#8bb3ff2b}
+body .philosophy h2 {font-weight:600;letter-spacing:-.045em}
+body .philosophy h2 em,body .contact-cta h2 em,body .page-title em {font-family:var(--sans);font-style:italic;font-weight:600;color:#91b9ff}
+body .philosophy h2>span {color:var(--accent);font-size:.85em}
+body .philosophy-bottom p {color:#acbad2}
+body .service {border-color:#8bb3ff2b;transition:background .25s}
+body .service:hover {background:linear-gradient(90deg,#075bff10,transparent)}
+body .service>.micro {color:#8fb7ff}
+body .service h3 {font-weight:500}
+body .service p {color:#a6b6d0}
+body .service>span:last-child {color:#8fb7ff}
+body .about-preview {border-color:#8bb3ff2b;background:radial-gradient(ellipse at 95% 80%,#075bff0d,transparent 55%)}
+body .about-preview p,body .about-content p,body .detail-copy p {color:#a9b9d4}
+body .about-mark {color:#c9d7ef;text-shadow:2px 3px 0 #274c88}
+body .about-mark>span {color:var(--accent)}
+body .contact-cta.section {border-color:#8bb3ff35;background:radial-gradient(ellipse at 50% 115%,#075bff25,transparent 70%),#060c1b}
+body .contact-cta h2 {font-family:var(--sans);font-weight:600;letter-spacing:-.055em}
+body .contact-cta>.eyebrow,body .contact-cta>.micro {color:#b6c9eb}
+body footer {background:linear-gradient(180deg,#03060d,#09142b);border-top:1px solid #8bb3ff26}
+body .footerline {color:#a2b2cd}
+body .footerline a:hover {color:#b9d3ff}
+body .personal-footer {color:#c8d8f2;background:linear-gradient(165deg,#f2f7ff 5%,#9aafcf 43%,#d2e2ff 52%,#326bc6 85%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+body .inner-page {background:radial-gradient(ellipse at 100% 0,#075bff18,transparent 45%)}
+body .page-title {font-weight:600;letter-spacing:-.045em}
+body .intro,body .contact-info p {color:#acbad4}
+body .detail-copy h2,body .about-content h2,body .about-content h3 {color:#e4edff}
+body .green,body .contact-email {color:#91b9ff}
+body .contact-placeholder {border-color:#8bb3ff35}
+body .contact-social {color:#95a8c9}
+@media(max-width:700px){
+  body .ticker {font-size:12px;letter-spacing:1px}
+  body .navlinks {background:#080f20f7;border-color:#8bb3ff40;backdrop-filter:blur(14px)}
+  body .project-art {border-radius:10px}
+  body .work-grid {row-gap:28px;padding-bottom:0}
+  body .work-grid>.project:nth-child(even) {transform:none}
+  body .contact-cta h2 {letter-spacing:-.04em}
+}
+@media(prefers-reduced-motion:reduce){body .service{transition:none}}
+
