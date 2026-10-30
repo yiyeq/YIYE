@@ -83,6 +83,27 @@
   .banner-robot{left:79%;top:14%}
 }
 @media(max-width:350px){.portfolio-banner{--character-width:125%}}
+/* Narrow editorial portrait studies, inspired by collectible image strips. */
+.banner-project-position{width:22%;right:6%;top:57%;z-index:2}
+.banner-secondary-position{width:19%;right:2.5%;top:75%}
+.portrait-project-card{display:block;position:relative;transform:none;transition:transform .3s ease;color:#e4ecff}
+.portrait-project-card:hover{transform:translateY(-4px)}
+.portrait-card-tabs{display:flex;justify-content:flex-end;gap:3px;margin-bottom:5px;font:clamp(5px,.48vw,9px)/1.3 var(--mono);letter-spacing:.08em;color:#a9b8ce}
+.portrait-card-tabs>span{border:1px solid #a9b8ce55;border-radius:12px;padding:1px 7px;background:#050b1677}
+.portrait-card-frame{display:block;position:relative;aspect-ratio:2.85;overflow:hidden;border:1px solid #adcaff66;background:linear-gradient(120deg,#031026,#1b2435 60%,#060b15);box-shadow:0 12px 28px #0008,inset 0 1px #fff2}
+.portrait-card-frame>img{position:absolute;width:180%;height:auto;left:-65%;top:-110%;filter:grayscale(1) contrast(1.12)}
+.portrait-card-shade{position:absolute;inset:0;background:linear-gradient(90deg,#075bff70,transparent 38%,#03060d08 60%,#02061177)}
+.portrait-card-scan{position:absolute;left:0;right:0;top:42%;height:13%;background:repeating-linear-gradient(90deg,#075bff 0 3px,#639bff 3px 4px);mix-blend-mode:screen;opacity:.7}
+.portrait-card-number{position:absolute;top:8%;left:4%;font:clamp(5px,.4vw,8px) var(--mono);letter-spacing:.09em}
+.portrait-card-signature{position:absolute;right:6%;bottom:6%;font:italic 600 clamp(16px,2.2vw,42px)/1 'Segoe Script','Brush Script MT',cursive;letter-spacing:-.07em;color:#4b85ff;text-shadow:0 1px 5px #020814}
+.portrait-card-arrow{position:absolute;right:4%;top:8%;color:#cbdcff}
+.portrait-card-marks{display:block;text-align:right;margin-top:5px;padding-right:5px;font-size:12px;letter-spacing:5px;color:#c4d5ef}
+.portrait-project-card-secondary{transform:rotate(8deg)}
+.portrait-project-card-secondary .portrait-card-frame>img{width:210%;left:-85%;top:-140%}
+.portrait-project-card-secondary .portrait-card-scan{top:28%;height:5%;opacity:.5}
+.portrait-project-card-secondary .portrait-card-signature{font-size:clamp(16px,1.9vw,36px)}
+@media(min-width:701px) and (max-width:1100px){.banner-project-position{width:25%;right:4%;top:57%}.banner-secondary-position{display:block;width:20%;right:2%;top:75%}}
+@media(max-width:700px){.banner-project-position,.banner-secondary-position{display:none}}
 @media(prefers-reduced-motion:reduce){.portfolio-banner *{animation:none!important;transition:none!important}.banner-depth,.banner-figure{translate:none!important}}
 
 

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {useEffect, useRef} from 'react';
-import {ArrowRight, Plus} from 'lucide-react';
+import {ArrowRight} from 'lucide-react';
 
 import {heroAssets} from '@/data/hero';
 
@@ -16,9 +16,10 @@ export function ProfileCard() {
 }
 
 export function HeroProjectCard({secondary = false}: {secondary?: boolean}) {
-  return <Link href={secondary ? '/works/soft-matter/' : '/works/'} className={`banner-glass project-glass${secondary ? ' project-glass-secondary' : ''}`} aria-label={secondary ? 'Explore Soft matter concept study' : 'Explore selected concept projects'}>
-    <div className="banner-concept-art" aria-hidden="true"><div className="concept-ring"/><div className="concept-sphere"/><span className="concept-grid"/></div>
-    <span className="project-plus"><Plus size={14}/></span><span className="project-card-label">{secondary ? <>MATERIAL<br/>EXPLORATIONS</> : <>IDEAS<br/>VISUALS<br/>BRANDS<br/>AND MORE...</>}</span><span className="project-concept-label">CONCEPT STUDY / {secondary ? '02' : '01'}</span>
+  return <Link href={secondary ? '/works/soft-matter/' : '/works/'} className={`portrait-project-card${secondary ? ' portrait-project-card-secondary' : ''}`} aria-label={secondary ? 'Explore Soft matter concept study' : 'Explore selected concept projects'}>
+    <span className="portrait-card-tabs" aria-hidden="true"><span>{secondary ? 'EXPERIMENT' : 'ART DIRECTION'}</span><span>3D</span><span>VISUAL</span></span>
+    <span className="portrait-card-frame"><Image src={heroAssets.character} alt="GUO 三维形象脸部特写" width={1086} height={1448} sizes="(max-width:1100px) 30vw, 25vw"/><span className="portrait-card-shade"/><span className="portrait-card-scan"/><span className="portrait-card-number">{secondary ? '02 / MATERIAL STUDY' : '01 / SELECTED VISUALS'}</span><span className="portrait-card-signature">Julian Guo</span><ArrowRight className="portrait-card-arrow" size={13}/></span>
+    <span className="portrait-card-marks" aria-hidden="true">✦ ◇ ✳</span>
   </Link>;
 }
 
@@ -58,7 +59,6 @@ export function Hero() {
     </div>
     <div className="banner-profile-position banner-depth"><ProfileCard/></div>
     <div className="banner-project-position banner-depth"><HeroProjectCard/></div>
-    <div className="banner-secondary-position banner-depth"><HeroProjectCard secondary/></div>
     <div className="banner-star banner-depth" aria-hidden="true"><Image src={heroAssets.star} alt="" width={1254} height={1254} sizes="120px"/></div>
 
     <div className="banner-bottom-left"><span className="banner-orbits" aria-hidden="true">◯◯◯</span><p>CONCEPT<br/>3D VISUAL<br/>BRAND DESIGN<br/>CREATIVE DIRECTION</p></div>
