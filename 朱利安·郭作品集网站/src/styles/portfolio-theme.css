@@ -34,7 +34,7 @@ body .project-meta h3 {font-weight:500;letter-spacing:.015em}
 body .project-meta h3 span {color:var(--accent-light)}
 body .project-meta p {color:#a5b4ce;line-height:1.6}
 /* Offset the right column visually without adding that offset to every grid row. */
-body .work-grid {row-gap:36px;padding-bottom:60px}
+body .work-grid {row-gap:80px;padding-bottom:60px}
 body .work-grid>.project:nth-child(even) {margin-top:0;transform:translateY(60px)}
 /* Each concept retains its own composition within the shared cool palette. */
 body .forma {background:linear-gradient(135deg,#d3dfef,#8495b3);color:#101c32}
@@ -81,7 +81,7 @@ body .contact-social {color:#95a8c9}
   body .ticker {font-size:12px;letter-spacing:1px}
   body .navlinks {background:#080f20f7;border-color:#8bb3ff40;backdrop-filter:blur(14px)}
   body .project-art {border-radius:10px}
-  body .work-grid {row-gap:28px;padding-bottom:0}
+  body .work-grid {row-gap:80px;padding-bottom:0}
   body .work-grid>.project:nth-child(even) {transform:none}
   body .contact-cta h2 {letter-spacing:-.04em}
 }
