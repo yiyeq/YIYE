@@ -52,10 +52,9 @@ export function Hero() {
     <div className="banner-signature" aria-hidden="true">Guo.</div>
     <p className="banner-disciplines">VISUAL DESIGNER<br/>3D ARTIST<br/>CREATIVE DIRECTION</p>
 
-    <svg className="banner-flame banner-flame-left" viewBox="0 0 400 200" aria-hidden="true"><path d="M0 190C110 160 65 90 220 40C140 78 180 100 265 44C315 10 365 22 400 0C340 50 315 80 260 98C335 55 310 110 200 140C140 153 90 180 0 190ZM130 170C188 115 210 105 262 103C216 125 230 154 130 170Z"/></svg>
     <div className="banner-figure">
       <div className="banner-robot" aria-hidden="true"><Image src={heroAssets.robot} alt="" width={1004} height={1004} sizes="(max-width: 700px) 120px, 180px"/></div>
-      <div className="banner-character"><Image src={heroAssets.character} alt="GUO 的个人 3D 形象：黑色服装、银色护目镜和耳机" width={1672} height={941} priority sizes="(max-width: 700px) 850px, 110vw"/></div>
+      <div className="banner-character"><Image src={heroAssets.character} alt="GUO 的个人 3D 形象：黑色服装、银色护目镜和耳机" width={1086} height={1448} priority sizes="(max-width: 700px) 118vw, (max-width: 1100px) 83vw, 70vw"/></div>
     </div>
     <div className="banner-profile-position banner-depth"><ProfileCard/></div>
     <div className="banner-project-position banner-depth"><HeroProjectCard/></div>

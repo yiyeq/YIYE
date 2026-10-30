@@ -64,6 +64,24 @@
 @media(max-width:350px){.portfolio-banner{--character-width:850px}.profile-info strong{font-size:16px}.profile-role{font-size:10px}.profile-info small{font-size:8px}.banner-disciplines{font-size:7px;right:5%}.banner-navlinks{gap:18px;font-size:10px}}
 @media(min-width:701px) and (max-width:1100px){.banner-disciplines{left:27%;font-size:7px;letter-spacing:.15em;padding-left:8px}.banner-secondary-position{display:none}}
 @media(max-width:700px){.banner-explore-words{display:flex;gap:6px}.banner-explore-words>span{display:inline}.banner-explore-words>span+span:before{content:'/';margin-right:6px;color:#829bc9}}
+/* Portrait crop: responsive close framing rather than fitting the full figure. */
+.portfolio-banner{--character-width:70%;--profile-left:18%}
+.banner-title{left:50%;transform:translateX(-50%)}
+.banner-figure{top:14%;bottom:auto;left:54%}
+.banner-character img{width:100%;height:auto}
+.banner-robot{left:85%;top:16%}
+.profile-photo img{object-fit:cover;object-position:58% 14%;width:100%!important;height:100%!important;left:0!important;top:0!important}
+@media(min-width:701px) and (max-width:1100px){
+  .portfolio-banner{--character-width:83%;--profile-left:13%}
+  .banner-figure{top:18%;left:54%}
+  .banner-robot{left:84%;top:17%}
+}
+@media(max-width:700px){
+  .portfolio-banner{--character-width:118%;--profile-left:15%}
+  .banner-figure{top:24%;left:52%}
+  .banner-robot{left:79%;top:14%}
+}
+@media(max-width:350px){.portfolio-banner{--character-width:125%}}
 @media(prefers-reduced-motion:reduce){.portfolio-banner *{animation:none!important;transition:none!important}.banner-depth,.banner-figure{translate:none!important}}
 
 

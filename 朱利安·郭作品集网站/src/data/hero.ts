@@ -5,7 +5,7 @@ const asset = (name: string) => directory + encodeURIComponent(name);
 export const heroAssets = {
   background: asset('midnight-background-v3.png'),
   title: asset('金属渐变科技感“PORTFOLIO”字标.png'),
-  character: asset('ChatGPT 图像 2026年10月29日 16_39_10.png'),
+  character: asset('street-character-cutout.png'),
   star: asset('炫彩液态铬金属星芒.png'),
   robot: asset('可爱未来感机器人吉祥物1.png'),
 };
