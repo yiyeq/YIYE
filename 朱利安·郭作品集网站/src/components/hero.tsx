@@ -51,7 +51,7 @@ export function Hero() {
     <h1 id="portfolio-heading" className="banner-title banner-depth"><span className="banner-sr-only">Julian Guo — Portfolio</span><Image src={heroAssets.title} alt="" width={2172} height={724} priority sizes="100vw"/></h1>
     <div className="banner-signature" aria-hidden="true">Guo.</div>
     <p className="banner-disciplines">VISUAL DESIGNER<br/>3D ARTIST<br/>CREATIVE DIRECTION</p>
-    <p className="banner-manifesto">Crafting<br/>visual worlds<br/>with style<br/>and story.<span/></p>
+
     <svg className="banner-flame banner-flame-left" viewBox="0 0 400 200" aria-hidden="true"><path d="M0 190C110 160 65 90 220 40C140 78 180 100 265 44C315 10 365 22 400 0C340 50 315 80 260 98C335 55 310 110 200 140C140 153 90 180 0 190ZM130 170C188 115 210 105 262 103C216 125 230 154 130 170Z"/></svg>
     <div className="banner-figure">
       <div className="banner-robot" aria-hidden="true"><Image src={heroAssets.robot} alt="" width={1004} height={1004} sizes="(max-width: 700px) 120px, 180px"/></div>
@@ -61,7 +61,7 @@ export function Hero() {
     <div className="banner-project-position banner-depth"><HeroProjectCard/></div>
     <div className="banner-secondary-position banner-depth"><HeroProjectCard secondary/></div>
     <div className="banner-star banner-depth" aria-hidden="true"><Image src={heroAssets.star} alt="" width={1254} height={1254} sizes="120px"/></div>
-    <p className="banner-right-note">IDEAS<br/>VISUALS<br/>BRANDS<br/>AND MORE...</p>
+
     <div className="banner-bottom-left"><span className="banner-orbits" aria-hidden="true">◯◯◯</span><p>CONCEPT<br/>3D VISUAL<br/>BRAND DESIGN<br/>CREATIVE DIRECTION</p></div>
     <a href="#selected" className="banner-explore"><span className="banner-orbits" aria-hidden="true">◯◯◯</span><span className="banner-explore-words"><span>EXPLORE</span><span>CREATE</span><span>CONNECT</span></span><ArrowRight size={16}/></a>
   </section>;
