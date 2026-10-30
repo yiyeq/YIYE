@@ -53,7 +53,7 @@ export function Hero() {
     <p className="banner-disciplines">VISUAL DESIGNER<br/>3D ARTIST<br/>CREATIVE DIRECTION</p>
 
     <div className="banner-figure">
-      <div className="banner-robot" aria-hidden="true"><Image src={heroAssets.robot} alt="" width={1004} height={1004} sizes="(max-width: 700px) 120px, 180px"/></div>
+
       <div className="banner-character"><Image src={heroAssets.character} alt="GUO 的个人 3D 形象：黑色服装、银色护目镜和耳机" width={1086} height={1448} priority sizes="(max-width: 700px) 118vw, (max-width: 1100px) 83vw, 70vw"/></div>
     </div>
     <div className="banner-profile-position banner-depth"><ProfileCard/></div>
